@@ -1,0 +1,350 @@
+$colormain: #be3144;
+$colorletra: white;
+@mixin fondo-colorido($color) {
+  background-color: $color;
+}
+@mixin titulosection {
+  text-align: center;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 50px;
+}
+@mixin arco {
+  animation-name: arcoiris;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@mixin enlacehover {
+  &:hover {
+    animation-name: animehover;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  &:active {
+    color: rgba(209, 211, 65, 0.454);
+  }
+}
+html {
+  color: $colorletra;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.Container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  background-color: $colormain;
+  padding: 10px;
+  display: flex;
+  top: 0;
+  position: sticky;
+  justify-content: end;
+  width: 100%;
+  gap: 2rem;
+  .link {
+    text-decoration: none;
+    span {
+      font-size: 1.7rem;
+      color: aliceblue;
+      @include enlacehover();
+    }
+  }
+}
+#welcome {
+  @include fondo-colorido(#2a2b2d);
+  width: 100%;
+  #welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    #Title-Welcome {
+      color: $colorletra;
+      @include titulosection();
+      margin-top: 60px;
+      line-height: 1.8rem;
+      span {
+        color: yellow;
+        text-transform: capitalize;
+        font-size: 6rem;
+        @include arco;
+      }
+      #Web-Welcome {
+        color: yellow;
+        font-size: 10rem;
+        font-style: italic;
+        @include arco;
+      }
+    }
+    #fotocarnet {
+      img {
+        margin-right: 30px;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px 15px #553a27;
+      }
+      h2 {
+        text-align: center;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid salmon;
+        border-top-style: dashed;
+      }
+    }
+  }
+}
+
+@keyframes arcoiris {
+  0% {
+    color: yellow;
+  }
+  50% {
+    color: $colormain;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: cyan;
+  }
+}
+@keyframes animehover {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #476c9b;
+  }
+}
+
+#projects {
+  @include fondo-colorido(#45567d);
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  align-content: center;
+  align-items: center;
+  h1 {
+    color: $colorletra;
+    @include titulosection();
+  }
+  .proyectos {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    justify-items: center;
+    max-width: 1200px;
+    padding-bottom: 111px;
+    flex-wrap: wrap;
+    .project-tile {
+      background-color: rgba(187, 231, 228, 0.555);
+      width: 390px;
+      height: 370px;
+      text-align: center;
+      line-height: 13px;
+      img {
+        margin-top: 10px;
+        width: 370px;
+        height: 270px;
+      }
+      .nombreproyecto {
+        text-align: center;
+      }
+      #profile-link {
+        text-decoration: none;
+        color: wheat;
+        font-size: 2rem;
+        text-align: justify;
+        @include enlacehover();
+      }
+    }
+  }
+}
+#contacto-section {
+  @include fondo-colorido(#303841);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1rem;
+  h1 {
+    @include titulosection();
+    margin-bottom: 1px;
+  }
+  p {
+    @include titulosection();
+    font-size: 3rem;
+  }
+  .contacto {
+    padding: 90px 0;
+    ul {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      gap: 2.2rem;
+      li {
+        list-style: none;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 2.5rem;
+          img {
+            margin-right: 0.6rem;
+            width: 30px;
+            height: 30px;
+          }
+          @include enlacehover();
+        }
+      }
+    }
+  }
+}
+.footer {
+  @include fondo-colorido(#303841);
+  height: 9vh;
+  hr {
+    margin-top: 0;
+    border: 8px solid $colormain;
+  }
+  h2 {
+    text-align: end;
+    margin-right: 37px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  #welcome {
+    #welcome-section {
+      gap: 1px;
+      #Title-Welcome {
+        margin-top: 40px;
+        font-size: 2rem;
+        width: 75%;
+
+        h1 {
+          font-size: 2.7rem;
+          span {
+            font-size: 3rem;
+          }
+        }
+        #Web-Welcome {
+          font-size: 6rem;
+        }
+      }
+    }
+  }
+  #contacto-section {
+    @include fondo-colorido(#303841);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1rem;
+    h1 {
+      @include titulosection();
+      margin-bottom: 1px;
+    }
+    p {
+      @include titulosection();
+      font-size: 3rem;
+    }
+    .contacto {
+      ul {
+        flex-wrap: wrap;
+        line-height: 4rem;
+        margin: 0px 110px 0px 110px;
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #welcome {
+    #welcome-section {
+      flex-direction: column;
+      #Title-Welcome {
+        font-size: 1.7rem;
+        h1 {
+          font-size: 1.8rem;
+          span {
+            font-size: 2.5rem;
+          }
+        }
+        #Web-Welcome {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+  #navbar {
+    gap: 1rem;
+    a {
+      #sp {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  #projects {
+    .proyectos {
+      display: block;
+      gap: 17px;
+      max-width: 320px;
+      flex-wrap: nowrap;
+      .project-tile {
+        border-radius: 50%;
+        width: 320px;
+        height: 370px;
+        margin-bottom: 10px;
+        img {
+          border-radius: 50%;
+          margin-top: 10px;
+          width: 290px;
+          height: 270px;
+        }
+        .nombreproyecto {
+          line-height: 2.3px;
+        }
+        #profile-link {
+          font-size: 1.1rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  #contacto-section {
+    h1 {
+      font-size: 2.8rem;
+    }
+    p {
+      font-size: 2.4rem;
+    }
+    .contacto {
+      padding: 0;
+      height: auto;
+      margin-bottom: 50px;
+      ul {
+        display: block;
+        margin: 0;
+        font-size: 2rem;
+      }
+    }
+  }
+}

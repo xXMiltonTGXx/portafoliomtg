@@ -1,0 +1,197 @@
+@mixin centrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html {
+  width: 100%;
+  margin: 0;
+  background-color: #eeeeee;
+}
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#header {
+  position: sticky;
+  background-color: #eeeeee;
+  display: flex;
+  min-height: 9vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.8rem;
+  top: 0;
+  div {
+    gap: 1.2vw;
+    display: flex;
+    align-items: center;
+    h1 {
+      font: 1.8rem sherif;
+    }
+  }
+  nav {
+    padding-right: 1.8rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 5vw;
+    a {
+      color: black;
+      font: 200;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+  }
+}
+#form {
+  @include centrado();
+  flex-direction: column;
+  justify-items: center;
+  gap: 0.8rem;
+  label {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  #email {
+    width: 37vh;
+    padding: 0.2rem;
+  }
+}
+.section-feature {
+  @include centrado();
+  flex-direction: column;
+  margin-top: 3.1rem;
+  &-sub {
+    display: flex;
+    align-items: center;
+    gap: 3.8rem;
+    h2 {
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    .desc {
+      margin-top: 0;
+      width: 700px;
+    }
+  }
+}
+#Sect-Video {
+  @include centrado();
+  margin-top: 3.8rem;
+  margin-bottom: 3.8rem;
+}
+#Sect-Price {
+  @include centrado();
+  gap: 1.2rem;
+  &-Sub {
+    max-width: 320px;
+    background-color: #dddddd;
+    border: 1px solid black;
+    .title {
+      text-align: center;
+    }
+    .desc {
+      @extend #Sect-Price;
+      background-color: #eeeeee;
+      text-align: center;
+      flex-direction: column;
+      h3 {
+        font-weight: bolder;
+        font: 1.5rem "Lato", sans-serif;
+        margin-bottom: -1rem;
+      }
+      &-s {
+        width: 57%;
+        font-size: 1rem;
+        line-height: 25px;
+      }
+
+      button {
+        margin-bottom: 1rem;
+        font-weight: normal;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+#Sect-Footer {
+  @include centrado();
+  flex-direction: column;
+  margin-top: 30px;
+  background-color: #dddddd;
+  padding: 20px;
+  margin-bottom: -8px;
+  align-items: flex-end;
+
+  .main-footer {
+    margin-right: 45px;
+    a {
+      color: black;
+      font: 200;
+      font-size: 1.1rem;
+      text-decoration: none;
+      padding: 0px 20px;
+    }
+  }
+  .final-footer {
+    margin-right: 65px;
+    span {
+      margin-top: 5px;
+      font-size: 0.9em;
+      color: #444;
+    }
+  }
+}
+@media (max-width: 768px) {
+  body {
+    max-width: 768vw;
+    margin: auto;
+    overflow-x: hidden;
+  }
+  #header {
+    max-width: 768vw;
+    h1 {
+      display: none;
+    }
+    nav {
+      text-align: end;
+      justify-content: end;
+      padding-right: 0;
+      gap: 1rem;
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+  #form {
+    #email {
+      width: 23vh;
+    }
+  }
+  .section-feature {
+    @include centrado();
+    img {
+      display: none;
+    }
+    &-sub {
+      margin-left: 2rem;
+      @include centrado();
+      text-align: center;
+      .desc {
+        width: 90%;
+      }
+    }
+  }
+  #Sect-Video {
+    iframe {
+      @include centrado();
+      margin: auto;
+    }
+  }
+  #Sect-Price {
+    flex-direction: column;
+  }
+  #Sect-Footer {
+    @include centrado();
+  }
+}

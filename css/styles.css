@@ -1,0 +1,358 @@
+html {
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.Container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  background-color: #be3144;
+  padding: 10px;
+  display: flex;
+  top: 0;
+  position: sticky;
+  justify-content: end;
+  width: 100%;
+  gap: 2rem;
+}
+#navbar .link {
+  text-decoration: none;
+}
+#navbar .link span {
+  font-size: 1.7rem;
+  color: aliceblue;
+}
+#navbar .link span:hover {
+  animation-name: animehover;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+#navbar .link span:active {
+  color: rgba(209, 211, 65, 0.454);
+}
+
+#welcome {
+  background-color: #2a2b2d;
+  width: 100%;
+}
+#welcome #welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+#welcome #welcome-section #Title-Welcome {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 50px;
+  margin-top: 60px;
+  line-height: 1.8rem;
+}
+#welcome #welcome-section #Title-Welcome span {
+  color: yellow;
+  text-transform: capitalize;
+  font-size: 6rem;
+  animation-name: arcoiris;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+#welcome #welcome-section #Title-Welcome #Web-Welcome {
+  color: yellow;
+  font-size: 10rem;
+  font-style: italic;
+  animation-name: arcoiris;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+#welcome #welcome-section #fotocarnet img {
+  margin-right: 30px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px 15px #553a27;
+}
+#welcome #welcome-section #fotocarnet h2 {
+  text-align: center;
+}
+#welcome #welcome-section #fotocarnet hr {
+  border: none;
+  border-top: 1px solid salmon;
+  border-top-style: dashed;
+}
+
+@keyframes arcoiris {
+  0% {
+    color: yellow;
+  }
+  50% {
+    color: #be3144;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: cyan;
+  }
+}
+@keyframes animehover {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #476c9b;
+  }
+}
+#projects {
+  background-color: #45567d;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  align-content: center;
+  align-items: center;
+}
+#projects h1 {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 50px;
+}
+#projects .proyectos {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  justify-items: center;
+  max-width: 1200px;
+  padding-bottom: 111px;
+  flex-wrap: wrap;
+}
+#projects .proyectos .project-tile {
+  background-color: rgba(187, 231, 228, 0.555);
+  width: 390px;
+  height: 370px;
+  text-align: center;
+  line-height: 13px;
+}
+#projects .proyectos .project-tile img {
+  margin-top: 10px;
+  width: 370px;
+  height: 270px;
+}
+#projects .proyectos .project-tile .nombreproyecto {
+  text-align: center;
+}
+#projects .proyectos .project-tile #profile-link {
+  text-decoration: none;
+  color: wheat;
+  font-size: 2rem;
+  text-align: justify;
+}
+#projects .proyectos .project-tile #profile-link:hover {
+  animation-name: animehover;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+#projects .proyectos .project-tile #profile-link:active {
+  color: rgba(209, 211, 65, 0.454);
+}
+
+#contacto-section {
+  background-color: #303841;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1rem;
+}
+#contacto-section h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 50px;
+  margin-bottom: 1px;
+}
+#contacto-section p {
+  text-align: center;
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 50px;
+  font-size: 3rem;
+}
+#contacto-section .contacto {
+  padding: 90px 0;
+}
+#contacto-section .contacto ul {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 2.2rem;
+}
+#contacto-section .contacto ul li {
+  list-style: none;
+}
+#contacto-section .contacto ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+#contacto-section .contacto ul li a img {
+  margin-right: 0.6rem;
+  width: 30px;
+  height: 30px;
+}
+#contacto-section .contacto ul li a:hover {
+  animation-name: animehover;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+#contacto-section .contacto ul li a:active {
+  color: rgba(209, 211, 65, 0.454);
+}
+
+.footer {
+  background-color: #303841;
+  height: 9vh;
+}
+.footer hr {
+  margin-top: 0;
+  border: 8px solid #be3144;
+}
+.footer h2 {
+  text-align: end;
+  margin-right: 37px;
+}
+
+@media screen and (max-width: 1110px) {
+  #welcome #welcome-section {
+    gap: 1px;
+  }
+  #welcome #welcome-section #Title-Welcome {
+    margin-top: 40px;
+    font-size: 2rem;
+    width: 75%;
+  }
+  #welcome #welcome-section #Title-Welcome h1 {
+    font-size: 2.7rem;
+  }
+  #welcome #welcome-section #Title-Welcome h1 span {
+    font-size: 3rem;
+  }
+  #welcome #welcome-section #Title-Welcome #Web-Welcome {
+    font-size: 6rem;
+  }
+  #contacto-section {
+    background-color: #303841;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1rem;
+  }
+  #contacto-section h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 50px;
+    margin-bottom: 1px;
+  }
+  #contacto-section p {
+    text-align: center;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 50px;
+    font-size: 3rem;
+  }
+  #contacto-section .contacto ul {
+    flex-wrap: wrap;
+    line-height: 4rem;
+    margin: 0px 110px 0px 110px;
+  }
+  #contacto-section .contacto ul li {
+    list-style: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  #welcome #welcome-section {
+    flex-direction: column;
+  }
+  #welcome #welcome-section #Title-Welcome {
+    font-size: 1.7rem;
+  }
+  #welcome #welcome-section #Title-Welcome h1 {
+    font-size: 1.8rem;
+  }
+  #welcome #welcome-section #Title-Welcome h1 span {
+    font-size: 2.5rem;
+  }
+  #welcome #welcome-section #Title-Welcome #Web-Welcome {
+    font-size: 4rem;
+  }
+  #navbar {
+    gap: 1rem;
+  }
+  #navbar a #sp {
+    font-size: 1.2rem;
+  }
+  #projects .proyectos {
+    display: block;
+    gap: 17px;
+    max-width: 320px;
+    flex-wrap: nowrap;
+  }
+  #projects .proyectos .project-tile {
+    border-radius: 50%;
+    width: 320px;
+    height: 370px;
+    margin-bottom: 10px;
+  }
+  #projects .proyectos .project-tile img {
+    border-radius: 50%;
+    margin-top: 10px;
+    width: 290px;
+    height: 270px;
+  }
+  #projects .proyectos .project-tile .nombreproyecto {
+    line-height: 2.3px;
+  }
+  #projects .proyectos .project-tile #profile-link {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  #contacto-section h1 {
+    font-size: 2.8rem;
+  }
+  #contacto-section p {
+    font-size: 2.4rem;
+  }
+  #contacto-section .contacto {
+    padding: 0;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  #contacto-section .contacto ul {
+    display: block;
+    margin: 0;
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

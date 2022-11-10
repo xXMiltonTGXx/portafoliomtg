@@ -1,0 +1,241 @@
+#header-img {
+  width: 50px;
+  height: 50px;
+}
+
+.btnform {
+  background-color: #f1c40f;
+  padding: 0.4rem 1.2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  border: none;
+  padding-right: 0.4rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btnform:hover {
+  animation-name: cambiocolor;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cambiocolor {
+  0% {
+    background-color: #f1c40f;
+  }
+  100% {
+    background-color: #ff8c00;
+  }
+}
+.img-feature {
+  width: 50px;
+  height: 50px;
+}
+
+html {
+  width: 100%;
+  margin: 0;
+  background-color: #eeeeee;
+}
+
+#header {
+  position: sticky;
+  background-color: #eeeeee;
+  display: flex;
+  min-height: 9vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.8rem;
+  top: 0;
+}
+#header div {
+  gap: 1.2vw;
+  display: flex;
+  align-items: center;
+}
+#header div h1 {
+  font: 1.8rem sherif;
+}
+#header nav {
+  padding-right: 1.8rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 5vw;
+}
+#header nav a {
+  color: black;
+  font: 200;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+#form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-items: center;
+  gap: 0.8rem;
+}
+#form label {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+#form #email {
+  width: 37vh;
+  padding: 0.2rem;
+}
+
+.section-feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3.1rem;
+}
+.section-feature-sub {
+  display: flex;
+  align-items: center;
+  gap: 3.8rem;
+}
+.section-feature-sub h2 {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.section-feature-sub .desc {
+  margin-top: 0;
+  width: 700px;
+}
+
+#Sect-Video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.8rem;
+  margin-bottom: 3.8rem;
+}
+
+#Sect-Price, #Sect-Price-Sub .desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+#Sect-Price-Sub {
+  max-width: 320px;
+  background-color: #dddddd;
+  border: 1px solid black;
+}
+#Sect-Price-Sub .title {
+  text-align: center;
+}
+#Sect-Price-Sub .desc {
+  background-color: #eeeeee;
+  text-align: center;
+  flex-direction: column;
+}
+#Sect-Price-Sub .desc h3 {
+  font-weight: bolder;
+  font: 1.5rem "Lato", sans-serif;
+  margin-bottom: -1rem;
+}
+#Sect-Price-Sub .desc-s {
+  width: 57%;
+  font-size: 1rem;
+  line-height: 25px;
+}
+#Sect-Price-Sub .desc button {
+  margin-bottom: 1rem;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+#Sect-Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+  background-color: #dddddd;
+  padding: 20px;
+  margin-bottom: -8px;
+  align-items: flex-end;
+}
+#Sect-Footer .main-footer {
+  margin-right: 45px;
+}
+#Sect-Footer .main-footer a {
+  color: black;
+  font: 200;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0px 20px;
+}
+#Sect-Footer .final-footer {
+  margin-right: 65px;
+}
+#Sect-Footer .final-footer span {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 768vw;
+    margin: auto;
+    overflow-x: hidden;
+  }
+  #header {
+    max-width: 768vw;
+  }
+  #header h1 {
+    display: none;
+  }
+  #header nav {
+    text-align: end;
+    justify-content: end;
+    padding-right: 0;
+    gap: 1rem;
+  }
+  #header nav a {
+    font-size: 1rem;
+  }
+  #form #email {
+    width: 23vh;
+  }
+  .section-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .section-feature img {
+    display: none;
+  }
+  .section-feature-sub {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .section-feature-sub .desc {
+    width: 90%;
+  }
+  #Sect-Video iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  #Sect-Price, #Sect-Price-Sub .desc {
+    flex-direction: column;
+  }
+  #Sect-Footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

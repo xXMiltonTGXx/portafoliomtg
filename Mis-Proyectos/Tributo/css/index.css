@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: auto;
+}
+
+.header {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  font-size: 1.3rem;
+}
+.header #title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+#img-div {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+#img-div img {
+  max-width: 100%;
+  height: auto;
+}
+#img-div #img-caption p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-top: 0.1rem;
+}
+
+.contenido {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+}
+.contenido #tribute-info {
+  width: 45%;
+}
+.contenido #tribute-info li {
+  align-items: flex-start;
+  text-align: justify;
+  font-size: 1.1rem;
+  margin-bottom: 1.8rem;
+}
+.contenido p {
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+.contenido div#quote {
+  width: 35%;
+  margin-bottom: 1.8rem;
+  font-style: italic;
+  text-align: justify;
+}
+.contenido div#quote p {
+  font-weight: normal;
+}
+.contenido div#quote span {
+  display: flex;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 720px) {
+  .contenido #tribute-info {
+    width: 80%;
+  }
+  .contenido div#quote {
+    width: 65%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

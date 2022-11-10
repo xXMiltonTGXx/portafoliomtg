@@ -1,0 +1,37 @@
+$color-btn: #f1c40f;
+$color-icon: #ff8c00;
+
+#header-img {
+  width: 50px;
+  height: 50px;
+}
+.btnform {
+  background-color: $color-btn;
+  padding: 0.4rem 1.2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  border: none;
+  padding-right: 0.4rem;
+  border-radius: 2px;
+
+  cursor: pointer;
+  &:hover {
+    animation-name: cambiocolor;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes cambiocolor {
+  0% {
+    background-color: $color-btn;
+  }
+  100% {
+    background-color: #ff8c00;
+  }
+}
+
+.img-feature {
+  width: 50px;
+  height: 50px;
+}
